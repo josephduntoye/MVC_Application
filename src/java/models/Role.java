@@ -6,14 +6,14 @@ package models;
  */
 public class Role {
     private int roleId;
-    private String roleName;
+    private String name;
 
     public Role() {
     }
 
     public Role(int roleId, String roleName) {
         this.roleId = roleId;
-        this.roleName = roleName;
+        this.name = roleName;
     }
 
     public int getRoleId() {
@@ -24,12 +24,12 @@ public class Role {
         this.roleId = roleId;
     }
 
-    public String getRoleName() {
-        return roleName;
+    public String getName() {
+        return name;
     }
 
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
+    public void setName(String roleName) {
+        this.name = roleName;
     }
     
     

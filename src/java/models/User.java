@@ -6,7 +6,7 @@ package models;
  */
 public class User {
     private String email;
-    private boolean active;
+    private int active;
     private String firstName;
     private String lastName;
     private String password;
@@ -15,7 +15,7 @@ public class User {
     public User() {
     }
 
-    public User(String email, boolean active, String firstName, String lastName, String password, Role role) {
+    public User(String email, int active, String firstName, String lastName, String password, Role role) {
         this.email = email;
         this.active = active;
         this.firstName = firstName;
@@ -32,11 +32,11 @@ public class User {
         this.email = email;
     }
 
-    public boolean isActive() {
+    public int isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(int active) {
         this.active = active;
     }
 

@@ -29,17 +29,17 @@ public class UserDB {
         PreparedStatement ps = null;
         ResultSet rs = null;
         // query
-        String sql = "SELECT * FROM users";
+        String sql = "SELECT * FROM user";
         
         try {
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
                 String email = rs.getString(1);
-                Boolean active = rs.getBoolean(2);
-                String firstName = rs.getNString(3);
-                String lastName = rs.getNString(4);
-                String password = rs.getNString(5);
+                int active = rs.getInt(2);
+                String firstName = rs.getString(3);
+                String lastName = rs.getString(4);
+                String password = rs.getString(5);
                 //
                 int role = rs.getInt(6);
                 // call getRolebyID
@@ -78,7 +78,7 @@ public class UserDB {
             rs = ps.executeQuery();
             // it is just one note
             if (rs.next()) {
-                Boolean active = rs.getBoolean(2);
+                int active = rs.getInt(2);
                 String firstName = rs.getNString(3);
                 String lastName = rs.getNString(4);
                 String password = rs.getNString(5);
